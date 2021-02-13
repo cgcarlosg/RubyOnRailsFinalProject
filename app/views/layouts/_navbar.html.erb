@@ -1,0 +1,17 @@
+<nav>
+    <% if logged_in? %>
+    <h1> <%= current_name %> </h1>
+    <ul>        
+        <li class="h_li">
+        <%= link_to 'HOME', '#' %>
+        </li>
+        <li class="h_li">
+        <%= link_to "Log out", logout_path, method: :delete %>
+        </li>
+    <% else %>
+    <ul class="h_ul">
+        <li class="h_li"><%= link_to "Log in", login_path %></li>
+        <li class="h_li"><%= link_to "Sign up", signup_path %></li>
+    <% end %>
+    </ul>
+</nav>
