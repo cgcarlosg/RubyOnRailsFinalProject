@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_13_204630) do
+ActiveRecord::Schema.define(version: 2021_02_13_211227) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -20,14 +20,13 @@ ActiveRecord::Schema.define(version: 2021_02_13_204630) do
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
-  create_table "shopings", force: :cascade do |t|
+  create_table "trans", force: :cascade do |t|
     t.string "title"
     t.integer "total"
     t.integer "user_id", null: false
-    t.integer "category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_shopings_on_user_id"
+    t.index ["user_id"], name: "index_trans_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,5 +36,6 @@ ActiveRecord::Schema.define(version: 2021_02_13_204630) do
   end
 
   add_foreign_key "categories", "users"
-  add_foreign_key "shopings", "users"
+  add_foreign_key "trans", "users"
+
 end

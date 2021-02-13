@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
   include SessionsHelper
+
+  def authorize
+    redirect_to login_path, alert: 'Not Authorised ' if current_user.nil?
+  end
   
   private
 

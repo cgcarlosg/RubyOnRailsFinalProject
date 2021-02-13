@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @tran.title %>
+</p>
+
+<p>
+  <strong>Total:</strong>
+  <%= @tran.total %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tran.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_tran_path(@tran) %> |
+<%= link_to 'Back', trans_path %>
