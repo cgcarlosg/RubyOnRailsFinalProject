@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+.widthsize {
+  min-width: 60%;
+  max-width: 100%;
+}
+
+.widthsizetwo {
+  width: 100%;
+}
+
+.fontsizep {
+  font-size: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+  

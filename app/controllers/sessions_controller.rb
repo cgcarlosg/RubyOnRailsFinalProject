@@ -20,6 +20,6 @@ class SessionsController < ApplicationController
       else
         flash[:info] = "User wasn't even logged in."
       end
-      redirect_to root_url
+      redirect_to login_path
     end
 end

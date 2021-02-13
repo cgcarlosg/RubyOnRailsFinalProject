@@ -1,22 +1,14 @@
+<div class="container">
 <%= form_with(model: user) do |form| %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
-      <ul>
-        <% user.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
+  <div class="field form-group">
+    <%= form.label :username %><br/>
+    <%= form.text_field :username, class:"form-control mt-4" %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+<br/>
+<br/>
+<div class="d-grid gap-2">
+<%= form.submit "Create User", class:"btn btn-primary" %>
+</div><br/>
+<h4>Already registered ? <%= link_to "Sign In !", login_path %></h4>
 <% end %>
+</div>
