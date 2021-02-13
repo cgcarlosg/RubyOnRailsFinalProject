@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shopings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Total</th>
+      <th>User</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shopings.each do |shoping| %>
+      <tr>
+        <td><%= shoping.title %></td>
+        <td><%= shoping.total %></td>
+        <td><%= shoping.user_id %></td>
+        <td><%= shoping.category %></td>
+        <td><%= link_to 'Show', shoping %></td>
+        <td><%= link_to 'Edit', edit_shoping_path(shoping) %></td>
+        <td><%= link_to 'Destroy', shoping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shoping', new_shoping_path %>

@@ -7,7 +7,7 @@
         <%= image_tag("comprando.jpg") %>
       </div>
       <div>
-        <h5 class="ms-2 font-weight-light"><%= link_to "My Total Shoppings.", class: "text-dark" %></h5>
+        <h5 class="ms-2 font-weight-light"><%= link_to "My Transactions.", transactions_path, class: "text-dark" %></h5>
       </div>
     </div>
     <div class="d-flex flex-row align-items-center widthsize mb-3 border-bottom">
@@ -23,7 +23,7 @@
         <%= image_tag("categorias.jpg") %>
       </div>
       <div>
-        <h5 class="ms-2 font-weight-light"><%= link_to "Categories.", class: "text-dark" %></h5>
+        <h5 class="ms-2 font-weight-light"><%= link_to "Categories.", categories_path, class: "text-dark" %></h5>
       </div>  
     </div>
     <div class=" pt-3"><%= link_to 'logout', logout_path,method: :delete,class: "text-white text-decoration-none" %></div>
