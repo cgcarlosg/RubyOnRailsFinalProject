@@ -5,7 +5,7 @@ class TransController < ApplicationController
 
   # GET /trans or /trans.json
   def index
-    @trans = Tran.all.includes(:user)
+    @trans =  current_user.trans.includes(:category).where.not(category_id: nil)
   end
 
   # GET /trans/1 or /trans/1.json
@@ -55,7 +55,7 @@ class TransController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tran_params
-      params.require(:tran).permit(:title, :total)
+      params.require(:tran).permit(:title, :total, :category)
     end
 
 

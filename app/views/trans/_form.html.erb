@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_with(model: tran) do |form| %>
   <% if tran.errors.any? %>
     <div id="error_explanation">
@@ -11,17 +12,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= form.label :total %>
-    <%= form.number_field :total %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <div class="field form-group">
+  <%= form.label :title %><br/>
+  <%= form.text_field :title, class:"form-control mt-4" %>
+</div>
+<br/>
+<div class="field form-group">
+  <%= form.label :total  %><br/>
+  <%= form.number_field :total, class:"form-control mt-4" %>
+</div>
+<br/>
+<div class="field form-group">
+<%= form.label :category_id %><br/>
+<%= collection_select(:tran, :category, Category.all, :id, :name, { :prompt=> '' }, class:"form-control mt-4" )%>
+</div>
+<br/>
+<div class="d-grid gap-2">
+<%= form.submit "Add Shopping", class: "btn btn-success btn-block group-content" %>
+</div>
+<br/>
 <% end %>
+</div>
