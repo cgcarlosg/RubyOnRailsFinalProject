@@ -21,8 +21,9 @@
       </div>
     
       <div>
-        <h5 class="ms-2 font-weight-light"><%= link_to tran.title, tran_url(tran.id), class: "text-dark" %></h5>
+        <h5 class="ms-2 font-weight-light"><%= link_to tran.total, tran, class: "text-dark" %></h5>
         <p class="ms-2 mb-1 fontsizep"><%= tran.created_at.strftime("%d %B %Y") %></p>
+        <p class="ms-2 mb-1 fontsizep"><%= tran.category_id %></p>
       </div>
       </div>
 
@@ -37,3 +38,4 @@
      
     </div>
 </div>
+

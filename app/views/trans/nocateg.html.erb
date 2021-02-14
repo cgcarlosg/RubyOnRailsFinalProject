@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<div class="user-page d-flex flex-column align-items-center pt-2 widthsizetwo">
+
+    <h1 class="pt-5 pb-4 widthsizetwo text-center">Total of Transactions</h1>
+    <div class="bg-light-white p-b widthsizetwo">
+  <h2 class="d-flex justify-content-between bg-white align-items-center align-content-center">
+  <div>
+  <p> Grand Total </p>
+  </div>
+  <div>
+    $ <%=sum_total(@trans_nocateg)%>
+  </div>
+</h2>
+    <%  @trans_nocateg.each do |tran| %>
+
+    <div class="d-flex flex-row justify-content-between align-items-center widthsize mb-3 border-bottom">
+      <div class="d-flex flex-row">
+      <div>
+        <%= image_tag("comprando.jpg") %>
+      </div>
+    
+      <div>
+        <h5 class="ms-2 font-weight-light"><%= link_to tran.total, tran, class: "text-dark" %></h5>
+        <p class="ms-2 mb-1 fontsizep"><%= tran.created_at.strftime("%d %B %Y") %></p>
+        <p class="ms-2 mb-1 fontsizep"><%= tran.category_id %></p>
+      </div>
+      </div>
+
+      <div>$ <%=tran.total%>
+      </div>
+      
+    </div>
+    <% end %>
+    <div class="d-grid gap-2 widthsize">
+    <%= link_to 'New Transaction', new_tran_path, class: "btn btn-success btn-block group-content" %>
+    </div>
+     
+    </div>
+</div>
+

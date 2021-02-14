@@ -1,11 +1,13 @@
 class TransController < ApplicationController
   before_action :set_tran, only: %i[ show edit update destroy ]
 
-  
-
   # GET /trans or /trans.json
   def index
     @trans =  current_user.trans.includes(:category).where.not(category_id: nil)
+  end
+
+  def nocateg
+    @trans_nocateg =  current_user.trans.includes(:category).where(category_id: nil)
   end
 
   # GET /trans/1 or /trans/1.json
@@ -55,7 +57,7 @@ class TransController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tran_params
-      params.require(:tran).permit(:title, :total, :category)
+      params.require(:tran).permit(:title, :total, :category_id)
     end
 
 

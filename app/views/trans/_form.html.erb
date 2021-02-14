@@ -24,7 +24,7 @@
 <br/>
 <div class="field form-group">
 <%= form.label :category_id %><br/>
-<%= collection_select(:tran, :category, Category.all, :id, :name, { :prompt=> '' }, class:"form-control mt-4" )%>
+<%= collection_select(:tran, :category_id, Category.all, :id, :name, { :prompt=> '' }, class:"form-control mt-4" )%>
 </div>
 <br/>
 <div class="d-grid gap-2">
