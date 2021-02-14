@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[ show edit update destroy ]
+  before_action :icons_array, only: %i[new create edit update]
 
   # GET /categories or /categories.json
   def index
@@ -54,6 +55,10 @@ class CategoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def category_params
-      params.require(:category).permit(:name)
+      params.require(:category).permit(:name, :icon)
+    end
+
+    def icons_array
+      @category_array = icons
     end
 end
