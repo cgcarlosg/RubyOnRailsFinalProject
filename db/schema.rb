@@ -21,17 +21,6 @@ ActiveRecord::Schema.define(version: 2021_02_14_151911) do
     t.index ["user_id"], name: "index_categories_on_user_id"
   end
 
-  create_table "deals", force: :cascade do |t|
-    t.string "title"
-    t.integer "total"
-    t.integer "user_id", null: false
-    t.integer "category_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_deals_on_category_id"
-    t.index ["user_id"], name: "index_deals_on_user_id"
-  end
-
   create_table "trans", force: :cascade do |t|
     t.string "title"
     t.integer "total"

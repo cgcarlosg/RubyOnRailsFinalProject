@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
     <div class="container">
     <div class="user-page d-flex flex-column align-items-center pt-2">
-    <h4 class="pt-5 pb-4">My categories</h4>
-    <p class="text-white pt-3 ml-4"><%= current_user.username%></p></div>
+    <div>
+    <%= image_tag("profile.jpg") %>
+  </div>
+    <h4 class="pt-5 pb-4"><%= current_user.username.capitalize %></h4>
+
     <div class="d-flex flex-row align-items-center widthsize mb-3 border-bottom">
       <div>
         <%= image_tag("comprando.jpg") %>

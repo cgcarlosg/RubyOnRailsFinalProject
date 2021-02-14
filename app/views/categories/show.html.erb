@@ -1,4 +1,18 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+<div class="user-page d-flex flex-column align-items-center pt-2 widthsizetwo">
+
+    <h1 class="pt-5 pb-4 widthsizetwo text-center"><%= @category.name %></h1>
+    <div class="bg-light-white p-b widthsizetwo">
+  <h2 class="d-flex justify-content-between bg-white align-items-center align-content-center">
+  <div>
+  <p> Grand Total </p>
+  </div>
+  <div>
+    $ <%=sum_total(@trans)%>
+  </div>
+</h2>
+<% show_category_trans(@category) %>
 
 <p>
   <strong>Name:</strong>

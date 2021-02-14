@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-# before_action :set_user, only: %i[ show edit update destroy ]
+
   before_action :logged_in_user, only: [:show, :update]
   before_action :correct_user,   only: [:update]
 
@@ -27,11 +27,10 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
       if @user.save
-        flash[:success] = 'User Created'
-        redirect_to login_path
+        redirect_to login_path, notice: 'User Created'
       else
-        flash[:info] = 'User Creation failed'
-        render 'new'
+        'User Creation failed'
+        render 'new', notice: 'User already created, Log in'
       end
   end
   

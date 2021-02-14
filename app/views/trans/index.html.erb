@@ -17,13 +17,12 @@
     <div class="d-flex flex-row justify-content-between align-items-center widthsize mb-3 border-bottom">
       <div class="d-flex flex-row">
       <div>
-        <%= image_tag("comprando.jpg") %>
+      <%= fa_icon tran.category.icon, class: "fa-2x"  %>
       </div>
     
       <div>
-        <h5 class="ms-2 font-weight-light"><%= link_to tran.total, tran, class: "text-dark" %></h5>
+        <h5 class="ms-2 font-weight-light"><%= link_to tran.title, tran, class: "text-dark" %></h5>
         <p class="ms-2 mb-1 fontsizep"><%= tran.created_at.strftime("%d %B %Y") %></p>
-        <p class="ms-2 mb-1 fontsizep"><%= tran.category_id %></p>
       </div>
       </div>
 

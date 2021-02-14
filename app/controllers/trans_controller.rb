@@ -28,7 +28,7 @@ class TransController < ApplicationController
     @tran = current_user.trans.create(tran_params)
 
       if @tran.save
-        redirect_to trans_path, notice: "Tran was successfully created."
+        redirect_to root_path, notice: "Tran was successfully created."
       else
         render new_tran_path, notice: 'An error occurred'
       end
@@ -37,7 +37,7 @@ class TransController < ApplicationController
   # PATCH/PUT /trans/1 or /trans/1.json
   def update
       if @tran.update(tran_params)
-        redirect_to trans_path, notice: "Tran was successfully updated."
+        redirect_to root_path, notice: "Tran was successfully updated."
       else
         render 'edit', notice: 'An error occurred'
       end
