@@ -9,6 +9,8 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1 or /categories/1.json
   def show
+    @category = Category.find_by(id: params[:id])
+    @trans = Tran.includes(:category, :user).where(category_id: @category.id)
   end
 
   # GET /categories/new

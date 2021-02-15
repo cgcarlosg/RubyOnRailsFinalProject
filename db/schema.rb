@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_14_151911) do
+ActiveRecord::Schema.define(version: 2021_02_14_223147) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 2021_02_14_151911) do
   end
 
   add_foreign_key "categories", "users"
-  add_foreign_key "deals", "categories"
-  add_foreign_key "deals", "users"
+  add_foreign_key "tran_categories", "categories"
+  add_foreign_key "tran_categories", "trans"
   add_foreign_key "trans", "categories"
   add_foreign_key "trans", "users"
 end

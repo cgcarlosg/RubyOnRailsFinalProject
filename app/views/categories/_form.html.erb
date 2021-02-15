@@ -1,27 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
-
-      <ul>
-        <% category.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div><br/>
-  <div class="field">
-  <%= form.select :icon, options_for_select(@category_array), {include_blank: "Select Icon"}, {class: "custom-select mb-5"} %>
-  </div>
-
-
-
-  <div class="actions">
-    <%= form.submit %>
+  <div id="error_explanation">
+    <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+    <ul>
+      <% category.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
   </div>
 <% end %>
+
+  <div class="field form-group">
+  <%= form.label :name %><br/>
+  <%= form.text_field :name, class:"form-control mt-4" %>
+</div>
+<br/>
+<div class="field form-group">
+<%= form.select :icon, options_for_select(@category_array), {include_blank: "Select Icon"}, {class: "custom-select mb-5"} %>
+</div>
+<br/>
+<div class="d-grid gap-2">
+<%= form.submit "Create Category", class: "btn btn-success btn-block group-content" %>
+</div>
+<br/>
+<% end %>
+</div>
