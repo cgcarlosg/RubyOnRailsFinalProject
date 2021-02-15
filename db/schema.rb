@@ -39,8 +39,6 @@ ActiveRecord::Schema.define(version: 2021_02_14_223147) do
   end
 
   add_foreign_key "categories", "users"
-  add_foreign_key "tran_categories", "categories"
-  add_foreign_key "tran_categories", "trans"
   add_foreign_key "trans", "categories"
   add_foreign_key "trans", "users"
 end
