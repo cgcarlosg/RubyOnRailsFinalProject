@@ -47,11 +47,11 @@ Prerequisites
 - rspec --format documentation
 
 
-## Author
+## Author Carlos Gutierrez
 
-- Github: @cgcarlosg
-- Twitter: @cgcarlosg1
-- linkedIn: @carlosalbeniogutierrez
+- GitHub:  [@cgcarlosg](https://github.com/cgcarlosg)
+- Twitter: [@cgcarlosg1](https://twitter.com/cgcarlosg1)
+- LinkedIn: [@carlosalbeniogutierrez](www.linkedin.com/in/carlosalbeniogutierrez)
 
 🤝 Contributing
 Contributions, issues and feature requests are welcome!
