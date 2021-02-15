@@ -8,7 +8,7 @@ RSpec.describe CategoriesController, type: :controller do
       session[:user_id] = user.id
       @category = user.categories.create(name: 'Clothes', icon: 'bell')
     end
-    
+
     context 'it redirects to categories#index when successful' do
       it 'redirects to the categories index page' do
         patch :update, params: { id: @category.id, category: { name: 'Phone', icon: 'bell' } }

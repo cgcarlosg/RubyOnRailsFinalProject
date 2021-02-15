@@ -9,7 +9,5 @@ RSpec.describe Tran, type: :model do
     it 'To not be valid without total' do
       expect(Tran.new(title: 'carlos', total: '')).to_not be_valid
     end
-
-   
   end
 end

@@ -8,7 +8,5 @@ RSpec.describe UsersController, type: :controller do
         expect(response).not_to redirect_to(root_path(User.find_by(username: 'Carlos')))
       end
     end
-
- 
   end
 end
