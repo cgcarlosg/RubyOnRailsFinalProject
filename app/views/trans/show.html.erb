@@ -14,12 +14,12 @@
   <strong>User:</strong>
   <%= @tran.user_id %>
 </p>
-
+<% unless @tran.category_id == nil %>
 <p>
   <strong>Category:</strong>
   <%= @tran.category.name %>
 </p>
-
+<% end %>
 <%= link_to 'Edit', edit_tran_path(@tran) %> |
 <%= link_to 'Back', trans_path %>
 

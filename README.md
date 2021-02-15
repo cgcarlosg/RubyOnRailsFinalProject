@@ -16,8 +16,9 @@ It is an app that groups payments of anything bought for home. The transactions 
 ![screenshot](https://github.com/cgcarlosg/RubyOnRailsFinalProject/blob/feature/app/assets/images/total.jpg)
 
 
-Live demo link
-video presentation
+- [Live demo link](https://capstoneror.herokuapp.com/)
+
+- [video presentation](https://www.loom.com/share/133c9b4a1b034c7284e87c8ad1ca8463)
 
 ## Built With
 Ruby
