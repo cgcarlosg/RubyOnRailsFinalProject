@@ -1,24 +1,66 @@
-# README
+## Project Description
+It is an app that groups payments of anything bought for home. The transactions are divided into categories according to the purpose. Example car tools, clothes or a game to play in family.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Mobile app for grouping the payments according to your categories of choice
+A new user will sign up with a username and be directed to login page, after signing in will be to the profile page.
+The user can start adding categories or payments done for home.
+On the "My transactions", the user will see the list of payments or transactions created and total price of the them at the top of the page.
+The user can organize their payments list in any categories of choice. The user creates the category. Then it will reflect on the select options tab.
+A user can also edit or delete the transactions added.
 
-Things you may want to cover:
+screenshot
 
-* Ruby version
+screenshot
 
-* System dependencies
+screenshot
 
-* Configuration
+Live demo link
+video presentation
 
-* Database creation
+## Built With
+Ruby
+Ruby on Rails,
+RSpec and capybara
+Bootstrap
 
-* Database initialization
+## Getting Started
+To get a local copy up and running follow these simple example steps.
 
-* How to run the test suite
+Prerequisites
+The project is built using Rails 6 and Ruby-2.7.2
+Install Ruby and Git on local machine
+Install
+Install yarn.
+Run npm install to download all the packages in the package.json file.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Setup
+Clone the project into your local machine.
+cd into RubyOnRailsFinalProject
+run bundle install.
+Run rails db:create.
+Run rails db:migrate.
+Run rails s to open the project on the browser.
+Run tests
+Type the command 
+rspec --format documentation
 
-* Deployment instructions
 
-* ...
+## Author
+Github: @cgcarlosg
+Twitter: @cgcarlosg1
+linkedIn: @carlosalbeniogutierrez
+
+🤝 Contributing
+Contributions, issues and feature requests are welcome!
+
+Feel free to check the issues page.
+
+## Show your support
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+Microverse
+Rails Guides
+
+📝 License
+This project is MIT licensed.
