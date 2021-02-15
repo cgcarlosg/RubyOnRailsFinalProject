@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
     subject { User.new }
 
     it 'valid with username' do
-      subject.username = 'calos'
+      subject.username = 'carlos'
       expect(subject).to be_valid
     end
 
