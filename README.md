@@ -8,11 +8,12 @@ On the "My transactions", the user will see the list of payments or transactions
 The user can organize their payments list in any categories of choice. The user creates the category. Then it will reflect on the select options tab.
 A user can also edit or delete the transactions added.
 
-screenshot
+![screenshot](https://github.com/cgcarlosg/RubyOnRailsFinalProject/blob/feature/app/assets/images/profile.jpg)
 
-screenshot
+![screenshot](https://github.com/cgcarlosg/RubyOnRailsFinalProject/blob/feature/app/assets/images/categorias.jpg)
 
-screenshot
+![screenshot](https://github.com/cgcarlosg/RubyOnRailsFinalProject/blob/feature/app/assets/images/todas.jpg)
+
 
 Live demo link
 video presentation
