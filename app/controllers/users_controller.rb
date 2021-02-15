@@ -27,7 +27,6 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to login_path, notice: 'User Created'
     else
-      'User Creation failed'
       render 'new', notice: 'User already created, Log in'
     end
   end
