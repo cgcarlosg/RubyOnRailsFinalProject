@@ -2,7 +2,9 @@
     <div class="container">
     <div class="user-page d-flex flex-column align-items-center pt-2">
     <div>
-    <%= image_tag("profile.jpg") %>
+    <% unless current_user == nil %>
+    <%= image_tag current_user.image, style: "width:90px; heigth: 90px; display: block" %>
+    <% end %>
   </div>
     <h4 class="pt-5 pb-4"><%= current_user.username.capitalize %></h4>
 

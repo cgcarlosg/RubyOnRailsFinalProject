@@ -1,13 +1,10 @@
 class CategoriesController < ApplicationController
-  before_action :set_category, only: %i[show edit update destroy]
   before_action :icons_array, only: %i[new create edit update]
 
-  # GET /categories or /categories.json
   def index
     @categories = Category.all.includes(:user)
   end
 
-  # GET /categories/1 or /categories/1.json
   def show
     @category = Category.find_by(id: params[:id])
     @trans = Tran.includes(:category, :user).where(category_id: @category.id)
@@ -17,7 +14,9 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
 
-  def edit; end
+  def edit
+    @category = Category.find(params[:id])
+  end
 
   def create
     @category = current_user.categories.create(category_params)
@@ -43,10 +42,6 @@ class CategoriesController < ApplicationController
   end
 
   private
-
-  def set_category
-    @category = Category.find(params[:id])
-  end
 
   def category_params
     params.require(:category).permit(:name, :icon)
