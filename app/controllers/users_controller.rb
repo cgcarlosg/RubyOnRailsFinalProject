@@ -3,12 +3,10 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:update]
   before_action :authenticate_user, only: %i[index show new edit create update]
 
-
   def index
     @users = User.all
   end
 
-  
   def show
     @user = User.find(params[:id])
   end
@@ -16,7 +14,6 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
-
 
   def edit; end
 
@@ -41,7 +38,6 @@ class UsersController < ApplicationController
   end
 
   private
-
 
   def set_user
     @user = User.find(params[:id])

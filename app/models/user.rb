@@ -3,5 +3,4 @@ class User < ApplicationRecord
   has_many :categories
   has_many :trans, dependent: :destroy
   has_one_attached :image
-
 end
