@@ -13,15 +13,12 @@ class CategoriesController < ApplicationController
     @trans = Tran.includes(:category, :user).where(category_id: @category.id)
   end
 
-  # GET /categories/new
   def new
     @category = Category.new
   end
 
-  # GET /categories/1/edit
   def edit; end
 
-  # POST /categories or /categories.json
   def create
     @category = current_user.categories.create(category_params)
 
@@ -32,7 +29,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /categories/1 or /categories/1.json
   def update
     if @category.update(category_params)
       redirect_to categories_path, notice: 'Category was successfully updated.'
@@ -41,7 +37,6 @@ class CategoriesController < ApplicationController
     end
   end
 
-  # DELETE /categories/1 or /categories/1.json
   def destroy
     @category.destroy
     redirect_to categories_url, notice: 'Category was successfully destroyed.'
@@ -49,12 +44,10 @@ class CategoriesController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_category
     @category = Category.find(params[:id])
   end
 
-  # Only allow a list of trusted parameters through.
   def category_params
     params.require(:category).permit(:name, :icon)
   end

@@ -79,4 +79,8 @@ class ApplicationController < ActionController::Base
     flash[:danger] = 'Please log in.'
     redirect_to login_url
   end
+
+  def authenticate_user
+    redirect_to login_path if current_user.nil?
+  end
 end

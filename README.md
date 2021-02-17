@@ -1,12 +1,12 @@
 ## Project Description
 
-It is an app that groups payments of anything bought for home. The transactions are divided into categories according to the purpose. Example car tools, clothes or a game to play in family.
+It is an app that groups payments of anything bought for a home. The transactions are divided into categories according to the purpose. Example car tools, clothes, or a game to play in the family.
 
 - Mobile app for grouping the payments according to your categories of choice
-- A new user will sign up with a username and be directed to login page, after signing in will be to the profile page.
-- The user can start adding categories or payments done for home.
-- On the "My transactions", the user will see the list of payments or transactions created and total price of the them at the top of the page.
-- The user can organize their payments list in any categories of choice. The user creates the category. Then it will reflect on the select options tab.
+- A new user will sign up with a username and be directed to the login page, after signing in will be to the profile page.
+- The user can start adding categories or payments done for the home.
+- On the "My transactions", the user will see the list of payments or transactions created and the total price of them at the top of the page.
+- The user can organize the list of their payment in any category of choice. The user creates the category. Then it will reflect on the select options tab.
 - A user can also edit or delete the transactions added.
 
 ![screenshot](https://github.com/cgcarlosg/RubyOnRailsFinalProject/blob/feature/app/assets/images/profile2.jpg)

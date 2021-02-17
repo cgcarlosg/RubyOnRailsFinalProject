@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :logged_in_user, only: %i[show update]
   before_action :correct_user, only: [:update]
+  before_action :authenticate_user, only: %i[index]
 
   # GET /users or /users.json
   def index
