@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<div class="user-page d-flex flex-column align-items-center pt-2">
+
+<h4 class="pt-5 pb-4">Categories</h4>
+<% @categories.each do |category| %>
+
+<div class="d-flex flex-row align-items-center widthsize mb-3 border-bottom">
+  <div class="d-flex group align-items-center">
+  <%= fa_icon category.icon, class: "fa-2x" %>
+  </div>
+
+  <div>
+    <h5 class="ms-2 font-weight-light"><%= link_to category.name, category, class: "text-dark" %></h5>
+    <p class="ms-2 mb-1 fontsizep"><%= category.created_at.strftime("%d %B %Y") %></p>
+    </div>
+
+  
+</div>
+<% end %>
+
+<div class="d-grid gap-2 widthsize">
+<%= link_to "New Category", new_category_path, class:"btn btn-primary" %>
+</div>
+ 
+</div>

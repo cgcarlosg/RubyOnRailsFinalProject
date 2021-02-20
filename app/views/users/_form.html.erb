@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<%= form_with(model: user) do |form| %>
+  <div class="field form-group">
+    <%= form.label :username %><br/>
+    <%= form.text_field :username, class:"form-control mt-4" %>
+  </div>
+<br/>
+<div class="field form-group">
+    <%= form.label :image %><br/>
+    <%= form.file_field :image %>
+  </div>
+<br/>
+<br/>
+<div class="d-grid gap-2">
+<%= form.submit "Create User", class:"btn btn-primary" %>
+</div><br/>
+<h4>Already registered ? <%= link_to "Sign In !", login_path %></h4>
+<% end %>
+</div>

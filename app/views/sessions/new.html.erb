@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<div class="container mt-5">
+<h2 class="text-center">Log in to check the transactions you did </h2>
+
+<div class="container">
+<%= form_for(:session, url: login_path) do |form| %>
+  <div class="field form-group">
+    <%= form.label :username %><br/>
+    <%= form.text_field :username, class:"form-control mt-4" %>
+  </div>
+<br/>
+<br/>
+<div class="d-grid gap-2">
+<%= form.submit "Log in", class:"btn btn-primary" %>
+</div><br/>
+<h4>New user? <%= link_to "Sign up now!", signup_path %></h4>
+<% end %>
+</div>
+</div>
