@@ -21,10 +21,10 @@ It is an app that groups payments of anything bought for a home. The transaction
 - [video presentation](https://www.loom.com/share/133c9b4a1b034c7284e87c8ad1ca8463)
 
 ## Built With
-Ruby
-Ruby on Rails,
-RSpec and capybara
-Bootstrap
+- Ruby
+- Ruby on Rails,
+- RSpec and capybara
+- Bootstrap
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
